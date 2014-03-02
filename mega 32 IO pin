@@ -1,0 +1,23 @@
+#include <mega32.h>
+#include <delay.h>
+
+void shiftr(void);
+
+void main(void)
+{
+DDRD=0xff;
+while(1){
+     shiftr();
+     
+    }
+}
+
+void shiftr(void){
+  int i;
+  for(i=0;i<8;i++){
+       
+        PORTD=0x00;
+        delay_ms(50);
+        PORTD |=(1<<i);
+        delay_ms(50);
+		}}
